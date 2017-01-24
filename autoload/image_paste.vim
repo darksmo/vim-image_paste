@@ -31,8 +31,6 @@ function! image_paste#PasteImage()
   let images_dir  = g:images_root . images_path
   let file = strftime("%H%M%S") . '.png'
 
-  echo images_dir
-
   " Make sure the directory exists
   execute 'silent !mkdir -p ' . images_dir
   execute "silent !pngpaste " . images_dir . file
