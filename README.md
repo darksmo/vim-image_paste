@@ -1,3 +1,18 @@
+Vim 图片粘贴插件
+
+使用 Vim 写 Markdown 时，插入图片是个不太方便的操作。这个 Vim 插件可以解决这个小麻烦。
+
+安装插件后，复制图片到剪贴板，然后输入命令: `:call image_paste#PasteImage()`， 就可以自动保存剪贴板中的图片并在光标位置插入转换后的图片地址代码。
+
+插件依赖:
+
+1. OS X 系统
+2. [pngpaste][1]
+
+项目 fork 自 [unicornrainbow/vim-image_paste](https://github.com/unicornrainbow/vim-image_paste)。为了更好的与 Jekyll 协作，我对原项目做了一些修改。
+
+以下为原英文项目介绍:
+
 ## Requirements
 
 Currently supports OS X. Windows and linux support planned.
