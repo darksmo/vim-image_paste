@@ -9,12 +9,8 @@ if exists("g:loaded_images_paste)") || &cp
 endif
 let g:loaded_vimages = 1
 
-if !exists("g:loaded_images_paste")
-  if filereadable("../_config.yml")
-    let g:images_root = expand('../images/')
-  else
+if !exists("g:images_root")
     let g:images_root = expand('./images/')
-  endif
 endif
 
 function! s:warn(msg)
