@@ -13,6 +13,10 @@ if !exists("g:images_root")
     let g:images_root = expand('./images/')
 endif
 
+if !exists("g:vimages_label")
+    let g:vimages_label = ''
+endif
+
 function! s:warn(msg)
   echohl WarningMsg
   echomsg a:msg
@@ -33,7 +37,7 @@ function! image_paste#PasteImage()
 
   " Test that the file exists
   if filereadable(images_dir . file)
-    execute "normal a \<BS>".'![]('.g:images_root.images_path.file.')'
+    execute "normal a \<BS>".'![' . g:vimages_label . ']('.g:images_root.images_path.file.')'
     normal! 02l
     startinsert!
   else
